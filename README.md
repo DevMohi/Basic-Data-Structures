@@ -2,6 +2,7 @@
 - Time Complexity
 - Space Complexity
 - STL Vector 
+- Linked List
 
 
 # Notes
