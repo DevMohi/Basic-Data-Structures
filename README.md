@@ -1,7 +1,7 @@
 # Topics
 - Time Complexity
 - Space Complexity
-- Vector 
+- STL Vector 
 
 
 # Notes
