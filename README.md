@@ -3,6 +3,7 @@
 - Space Complexity
 - STL Vector 
 - Single Linked List
+- Double Linked List
 
 
 # Notes
