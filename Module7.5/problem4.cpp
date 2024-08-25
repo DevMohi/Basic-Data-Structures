@@ -1,76 +1,84 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
-class Node
-{
-public:
-    int val;
-    Node *next;
-    Node(int val)
-    {
-        this->val = val;
+
+class Node{
+    public: 
+        int val;
+        Node* next;
+
+    Node(int val){
+        this-> val = val;
         this->next = NULL;
+
     }
 };
 
+void insertTail(Node *&head, Node *&tail, int v){
+    Node *newNode = new Node(v);
 
-
-void insert_tail(Node *&head, Node *&tail, int val)
-{
-    //New Node created
-    Node *newNode = new Node(val);
-    if (head == NULL)
-    {
+    if(head == NULL){
         head = newNode;
         tail = newNode;
         return;
     }
-    //tail ta connect korsi
-    tail->next = newNode;
-
-    //tail update korsi
+    tail ->next = newNode;
     tail = newNode;
+
 }
 
-
-
-
-
-void print_linekd_list(Node *head)
-{
+//one way 
+void max_value(Node *head){
+    int max = INT_MIN;
     Node *tmp = head;
-    while (tmp != NULL)
-    {
-        cout << tmp->val << " ";
+
+    while(tmp != NULL){
+        if(tmp->val > max){
+            max = tmp-> val;
+        }
         tmp = tmp->next;
     }
-    cout << endl;
+    cout<<max<<" ";
 }
 
 
-int main()
-{
+void printList(Node *head){
+    Node *tmp = head;
+    while(tmp !=NULL){
+        cout<<tmp->val<<" ";
+        
+    }
+}
+
+
+
+
+
+int main(){
     Node *head = NULL;
     Node *tail = NULL;
-    int val;
-    while (true)
-    {
-        cin >> val;
-        if (val == -1)
+   
+
+    int v;
+
+    while(true){
+        cin>>v;
+        if(v == -1){
             break;
-        insert_tail(head, tail, val);
-    }
-    print_linekd_list(head);
-    // cout<<"value of max: "; 
-    
+        }
+        insertTail(head,tail,v);
+    }    
+  
+    // max_value(head); 
+
+    //another way
 
     int max =INT_MIN;
-    for(Node * i = head ; i != NULL; i = i->next){
-        if(i->val > max){
+    for(Node *i = head; i!= NULL; i = i->next){
+        if(i-> val > max){
             max = i->val;
         }
     }
-    cout<<max<<" ";
-    // print_linekd_list(head); 
 
+    cout<<max<<" ";
     return 0;
 }

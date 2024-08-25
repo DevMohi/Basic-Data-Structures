@@ -10,12 +10,6 @@
 //         tail = tail->next;
 //     }
 
-//     // void printList(ListNode *head) {
-//     //     while (head != NULL) {
-//     //         cout << head->val << " ";
-//     //         head = head->next;
-//     //     }
-//     // }
 
 // public:
 //     ListNode* mergeNodes(ListNode* head) {
