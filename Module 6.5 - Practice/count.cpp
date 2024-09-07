@@ -35,7 +35,6 @@ void print_linked_list(Node * head){
     cout<<"Your Linked List : ";
     Node *tmp = head;
     int count = 0;
-    int frq[100];
     while(tmp != NULL){
         cout<<tmp->val<<" ";
         tmp = tmp->next;
@@ -51,7 +50,6 @@ void print_linked_list(Node * head){
 int main(){
     Node * head = NULL;
     while(true){
-
         int v;
         cin>>v;
         if(v == -1){
